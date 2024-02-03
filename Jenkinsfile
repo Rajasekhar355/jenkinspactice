@@ -10,7 +10,7 @@ pipeline {
     }
 
     options {
-        timeout(time: 1, unit: 'HOURS')
+        timeout(time: 5, unit: 'SECONDS')
         disableConcurrentBuilds()
     }
 
@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "buils"
-                sleep(100)
+                sleep(10)
             }
         }
         stage('Test') {
