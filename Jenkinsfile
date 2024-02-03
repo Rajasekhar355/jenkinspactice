@@ -4,6 +4,11 @@ pipeline {
             label 'Agent_Test'
         }
     }
+
+    environment {
+        GREETING='Hello'
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -12,7 +17,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo "Test"
+                echo "Test$GREETING"
             }
         }
         stage('Deploy') {
