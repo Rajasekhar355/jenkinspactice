@@ -10,7 +10,7 @@ pipeline {
     }
 
     options {
-       // timeout(time: 5, unit: 'SECONDS')
+        // timeout(time: 5, unit: 'SECONDS')
         disableConcurrentBuilds()
     }
 
@@ -32,6 +32,16 @@ pipeline {
             steps {
                 echo "buils"
                 sleep(10)
+
+                 echo "Hello ${params.PERSON}"
+
+                echo "Biography: ${params.BIOGRAPHY}"
+
+                echo "Toggle: ${params.TOGGLE}"
+
+                echo "Choice: ${params.CHOICE}"
+
+                echo "Password: ${params.PASSWORD}"
             }
         }
         stage('Test') {
