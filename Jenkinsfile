@@ -10,7 +10,7 @@ pipeline {
     }
 
     options {
-        timeout(time: 5, unit: 'SECONDS')
+       // timeout(time: 5, unit: 'SECONDS')
         disableConcurrentBuilds()
     }
 
@@ -26,7 +26,7 @@ pipeline {
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
 
-    
+
     stages {
         stage('Build') {
             steps {
